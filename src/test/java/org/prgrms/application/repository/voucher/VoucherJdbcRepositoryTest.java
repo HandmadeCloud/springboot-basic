@@ -35,16 +35,16 @@ class VoucherJdbcRepositoryTest {
             basePackages = {"org.prgrms.application.domain.voucher", "org.prgrms.application.repository.voucher","org.prgrms.application.service"}
     )
     static class Config {
-        @Bean
-        public DataSource dataSource() {
-            return new EmbeddedDatabaseBuilder()
-                    .generateUniqueName(true)
-                    .setType(EmbeddedDatabaseType.H2)
-                    .setScriptEncoding("UTF-8")
-                    .ignoreFailedDrops(true)
-                    .addScript("schema.sql")
-                    .build();
-        }
+//        @Bean
+//        public DataSource dataSource() {
+//            return new EmbeddedDatabaseBuilder()
+//                    .generateUniqueName(true)
+//                    .setType(EmbeddedDatabaseType.H2)
+//                    .setScriptEncoding("UTF-8")
+//                    .ignoreFailedDrops(true)
+//                    .addScript("schema.sql")
+//                    .build();
+//        }
 
         @Bean
         public JdbcTemplate jdbcTemplate(DataSource dataSource) {
@@ -68,9 +68,9 @@ class VoucherJdbcRepositoryTest {
 
     @Autowired
     VoucherJdbcRepository voucherJdbcRepository;
-
-    @Autowired
-    DataSource dataSource;
+//
+//    @Autowired
+//    DataSource dataSource;
 
     VoucherEntity newFixedVoucher;
     VoucherEntity newPercentVoucher;

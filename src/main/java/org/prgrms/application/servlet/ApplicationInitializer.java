@@ -40,6 +40,7 @@ public class ApplicationInitializer implements WebApplicationInitializer {
                         .addScript("schema.sql")
                         .build();
             }
+            //hikari
 
             @Bean
             public JdbcTemplate jdbcTemplate(DataSource dataSource) {
